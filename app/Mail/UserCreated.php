@@ -32,6 +32,6 @@ class UserCreated extends Mailable
     public function build()
     {
         // the $user will be automaticly passed to the view
-        return $this->text('emails.welcome');
+        return $this->markdown('emails.welcome')->subject('Please confirm your account');
     }
 }

@@ -12,6 +12,7 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap any application services.
      *
@@ -23,14 +24,18 @@ class AppServiceProvider extends ServiceProvider
 
         // Send a verification email to user when created
         User::created(function($user) {
-                Mail::to($user->email)->send(new UserCreated($user));
-            });
+            retry(5, function() use ($user) {
+                Mail::to($user->email)->send(new UserCreated($user));  
+            }, 100);
+        });
 
         // Send a verification email to user when email changed
         User::updated(function($user) {
-            if ($user->isDirty('email')) {
-                Mail::to($user->email)->send(new UserMailChanged($user));                
-            }
+            retry(5, function() use ($user) {
+                if ($user->isDirty('email')) {
+                    Mail::to($user->email)->send(new UserMailChanged($user));
+                }
+            }, 100);
         });
 
         // Update a product status when a product is updated
