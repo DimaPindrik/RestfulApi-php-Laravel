@@ -14,8 +14,8 @@ class UserController extends ApiController
 
     public function __construct()
     {
-        parent::__construct();
-
+        $this->middleware('client.credentials')->only(['store', 'resend']);
+        $this->middleware('auth:api')->except(['store', 'verify', 'resend']);
         $this->middleware('transform.input:' . UserTransformer::class)->only(['store', 'update']);
     }
 
@@ -79,9 +79,9 @@ class UserController extends ApiController
     public function update(Request $request, User $user)
     {
         $rules = [
-            'email' => 'email|unique:users|email,' . $user->id,
+            'email'    => 'email|unique:users|email,' . $user->id,
             'password' => 'min:6|confirmed',
-            'admin' => 'in:' . User::ADMIN_USER . ',' . User::REGULAR_USER,
+            'admin'    => 'in:' . User::ADMIN_USER . ',' . User::REGULAR_USER,
         ];
 
         if ($request->has('name')) {
