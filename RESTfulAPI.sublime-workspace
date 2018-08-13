@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"pass",
+				"password_confirmation"
+			],
+			[
+				"C",
+				"CheckForAnyScope〔class〕"
+			],
+			[
 				"trans",
 				"$transformedErrors〔variable〕"
 			],
@@ -76,19 +84,11 @@
 	"buffers":
 	[
 		{
-			"file": "app/Providers/AuthServiceProvider.php",
+			"file": "app/Http/Controllers/Seller/SellerProductController.php",
 			"settings":
 			{
-				"buffer_size": 776,
+				"buffer_size": 3833,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/js/components/passport/Clients.vue",
-			"settings":
-			{
-				"buffer_size": 12737,
 				"line_ending": "Unix"
 			}
 		}
@@ -105,10 +105,6 @@
 		"selected_items":
 		[
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"git push",
 				"Git: Push Current Branch"
 			],
@@ -117,8 +113,16 @@
 				"Git: Commit"
 			],
 			[
+				"git a",
+				"Git: Add All"
+			],
+			[
 				"git ad",
 				"Git: Add All"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"git sta",
@@ -147,10 +151,6 @@
 			[
 				"git pu",
 				"Git: Push Current Branch"
-			],
-			[
-				"git a",
-				"Git: Add All"
 			],
 			[
 				"git push c",
@@ -235,62 +235,67 @@
 	"expanded_folders":
 	[
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/assets",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/assets/js",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/assets/js/components",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/assets/js/components/passport",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/layouts",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/routes"
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Providers",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/database",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/database/migrations"
 	],
 	"file_history":
 	[
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/User/UserController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Transaction/TransactionSellerController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Transaction/TransactionController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerTransactionController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerProductController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Product/ProductCategoryController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/User/UserController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerCategoryController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerTransactionController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerCategoryController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Providers/AuthServiceProvider.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/routes/api.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/vendor/laravel/passport/src/Passport.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Exceptions/Handler.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Product/ProductBuyerTransactionController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Traits/ApiResponser.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/User.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/UserTransformer.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Middleware/TransformInput.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/routes/web.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Kernel.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/vendor/laravel/passport/src/Http/Middleware/CheckClientCredentials.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/vendor/laravel/passport/src/Http/Middleware/CheckScopes.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/assets/js/app.js",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/home/personal-clients.blade.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/home/authorized-clients.blade.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/layouts/app.blade.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/HomeController.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/home/personal-tokens.blade.php",
+		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/.gitignore",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Category/CategoryController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/ApiController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerBuyerController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Transaction/TransactionSellerController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerCategoryController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Transaction/TransactionController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerTransactionController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Product/ProductTransactionController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Product/ProductBuyerController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Category/CategoryBuyerController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Category/CategoryTransactionController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Category/CategorySellerController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerCategoryController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerTransactionController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerProductController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Buyer/BuyerSellerController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Transaction/TransactionCategoryController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Kernel.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/config/auth.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/routes/api.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Product/ProductController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Category/CategoryProductController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/User.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/config/app.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/composer.json",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/routes/web.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/layouts/app.blade.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Exceptions/Handler.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/resources/views/welcome.blade.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/HomeController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Traits/ApiResponser.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/BuyerTransformer.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/UserTransformer.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Middleware/TransformInput.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/ProductTransformer.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/TransactionTransformer.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/CategoryTransformer.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Transformers/SellerTransformer.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Seller/SellerProductController.php",
-		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Http/Controllers/Product/ProductBuyerTransactionController.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Buyer.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Category.php",
 		"/C/Users/Dima/Desktop/Dev/Laravel Projects/RESTfulAPI/app/Product.php",
@@ -341,7 +346,7 @@
 	],
 	"find":
 	{
-		"height": 40.8
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -355,6 +360,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"transformedatt",
+			"transformedATt",
 			"api",
 			"();\n",
 			"Seller",
@@ -381,29 +388,29 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Providers/AuthServiceProvider.php",
+					"file": "app/Http/Controllers/Seller/SellerProductController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 776,
+						"buffer_size": 3833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								767,
-								767
+								1017,
+								1017
 							]
 						],
 						"settings":
 						{
-							"SL.494.region_keys":
+							"SL.73.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
@@ -413,37 +420,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/assets/js/components/passport/Clients.vue",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 12737,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								226,
-								226
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -454,7 +431,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -499,7 +476,7 @@
 	"project": "RESTfulAPI.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -508,6 +485,58 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"SellerPro",
+				"app\\Http\\Controllers\\Seller\\SellerProductController.php"
+			],
+			[
+				"TransactionSell",
+				"app\\Http\\Controllers\\Transaction\\TransactionSellerController.php"
+			],
+			[
+				"TransactionCon",
+				"app\\Http\\Controllers\\Transaction\\TransactionController.php"
+			],
+			[
+				"SellerTra",
+				"app\\Http\\Controllers\\Seller\\SellerTransactionController.php"
+			],
+			[
+				"SellerCon",
+				"app\\Http\\Controllers\\Seller\\SellerController.php"
+			],
+			[
+				"SellerCa",
+				"app\\Http\\Controllers\\Seller\\SellerCategoryController.php"
+			],
+			[
+				"BuyerTra",
+				"app\\Http\\Controllers\\Buyer\\BuyerTransactionController.php"
+			],
+			[
+				"BuyerCon",
+				"app\\Http\\Controllers\\Buyer\\BuyerController.php"
+			],
+			[
+				"BuyerCate",
+				"app\\Http\\Controllers\\Buyer\\BuyerCategoryController.php"
+			],
+			[
+				"UserCon",
+				"app\\Http\\Controllers\\User\\UserController.php"
+			],
+			[
+				"ProductCate",
+				"app\\Http\\Controllers\\Product\\ProductCategoryController.php"
+			],
+			[
+				"api rout",
+				"routes\\api.php"
+			],
+			[
+				"userCon",
+				"app\\Http\\Controllers\\User\\UserController.php"
+			],
 			[
 				"Illuminate\\Router",
 				"vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php"

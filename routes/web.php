@@ -1,16 +1,9 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+// Default route
+Route::get('/',function() {
+	return view('welcome');
+})->middleware('guest');
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -23,13 +16,13 @@ $this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
+// Custom routes
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Oauth passport routes
 Route::get('/home/my-tokens', 'HomeController@getTokens')->name('personal-tokens');
 Route::get('/home/my-clients', 'HomeController@getClients')->name('personal-clients');
 Route::get('/home/authorized-clients', 'HomeController@getAuthorizedClients')->name('authorized-clients');
 
-Route::get('/',function() {
-	return view('welcome');
-})->middleware('guest');
 
 

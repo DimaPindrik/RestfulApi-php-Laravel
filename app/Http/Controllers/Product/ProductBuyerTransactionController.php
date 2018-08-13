@@ -19,6 +19,7 @@ class ProductBuyerTransactionController extends ApiController
         parent::__construct();
 
         $this->middleware('transform.input:' . TransactionTransformer::class)->only(['store']);
+        $this->middleware('scope:purchase-product')->only(['store']);
     }
 
     /**
@@ -34,6 +35,8 @@ class ProductBuyerTransactionController extends ApiController
             'quantity' => 'required|integer|min:1'
         ];
 
+        $this->validate($request, $rules);
+        
         if ($buyer->id == $product->seller_id) {
             return $this->errorResponse('The buyer must be different from the seller', 409);
         }
