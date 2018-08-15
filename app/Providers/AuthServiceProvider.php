@@ -9,7 +9,7 @@ use App\Product;
 use Carbon\Carbon;
 use App\Transaction;
 use App\Policies\BuyerPolicy;
-use App\Policies\UserPoliciy;
+use App\Policies\UserPolicy;
 use App\Policies\SellerPolicy;
 use Laravel\Passport\Passport;
 use App\Policies\ProductPolicy;
@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         Buyer::class       => BuyerPolicy::class,
         Seller::class      => SellerPolicy::class,
-        User::class        => UserPoliciy::class,
+        User::class        => UserPolicy::class,
         Transaction::class => TransactionPolicy::class,
         Product::class     => ProductPolicy::class,
     ];
@@ -40,6 +40,10 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        Gate::define('admin-action', function ($user) {
+            return $user->isAdmin();
+        });
 
         // Laravel/Passport service providers
         Passport::routes();

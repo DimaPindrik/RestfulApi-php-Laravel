@@ -13,7 +13,7 @@ class SellerController extends ApiController
     {
         parent::__construct();
 
-        $this->middleware('scope:read-general')->only(['show']);
+        $this->middleware('scope:read-general')->only('show');
         $this->middleware('can:view,seller')->only('show');
     }
     
@@ -24,6 +24,8 @@ class SellerController extends ApiController
      */
     public function index()
     {
+        $this->allowedAdminAction();
+        
         $sellers = Seller::has('products')->get();
 
         return $this->showAll($sellers);    }

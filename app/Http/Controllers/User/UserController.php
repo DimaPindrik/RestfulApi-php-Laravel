@@ -31,6 +31,8 @@ class UserController extends ApiController
      */
     public function index()
     {
+        $this->allowedAdminAction();
+
         $users = User::all();
 
         return $this->showAll($users);
@@ -82,7 +84,7 @@ class UserController extends ApiController
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
-    {
+    {        
         $rules = [
             'email'    => 'email|unique:users|email,' . $user->id,
             'password' => 'min:6|confirmed',
@@ -104,6 +106,8 @@ class UserController extends ApiController
         }
 
         if ($request->has('admin')) {
+            $this->allowedAdminAction();
+
             if (!$user->isVerified()) {
                 return $this->errorResponse('Only verified users can modify the admin field', 409);
             }

@@ -4,11 +4,12 @@ namespace App\Policies;
 
 use App\User;
 use App\Seller;
+use App\Traits\AdminActions;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class SellerPolicy
 {
-    use HandlesAuthorization;
+    use HandlesAuthorization, AdminActions;
 
     // To register a new policy go to 'AuthServiceProvider' file.
 
