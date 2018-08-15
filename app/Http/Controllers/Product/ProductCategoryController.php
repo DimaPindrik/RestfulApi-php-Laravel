@@ -13,9 +13,12 @@ class ProductCategoryController extends ApiController
 
     public function __construct()
     {
-        $this->middleware('client.credentials')->only(['index']);
-        $this->middleware('auth:api')->except(['index']);
-        $this->middleware('scope:manage-products')->except(['index']);
+        $this->middleware('client.credentials')->only('index');
+        $this->middleware('auth:api')->except('index');
+        $this->middleware('scope:manage-products')->except('index');
+
+        $this->middleware('can:add-category,product')->only('update');
+        $this->middleware('can:delete-category,product')->only('destroy');
     }
     
     /**
@@ -32,7 +35,7 @@ class ProductCategoryController extends ApiController
 
     public function update(Request $request, Product $product, Category $category) 
     {
-        $product->categories()->syncWithoutDetach([$category->id]);
+        $product->categories()->syncWithoutDetaching([$category->id]);
 
         return $this->showAll($product->categories);
     }
